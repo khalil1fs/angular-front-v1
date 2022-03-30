@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as dragon from 'openseadragon';
 
 @Component({
   selector: 'app-root',

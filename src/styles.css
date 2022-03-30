@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*@import "~bootstrap/dist/css/bootstrap.min.css";*/
+@import "~font-awesome/css/font-awesome.min.css";
+@import "bootstrap-template-ihm-gestion/vendor/fontawesome-free/css/all.min.css";
+@import "bootstrap-template-ihm-gestion/css/sb-admin-2.min.css";
+@import "bootstrap-template-ihm-gestion/vendor/datatables/dataTables.bootstrap4.min.css";
+
+@import "~primeicons/primeicons.css";
+@import "~primeng/resources/themes/lara-light-blue/theme.css";
+@import "~primeng/resources/primeng.min.css";
+
+/*"node_modules/bootstrap-template-ihm-gestion/vendor/jquery/jquery.min.js",*/
+/*"node_modules/bootstrap-template-ihm-gestion/vendor/bootstrap/js/bootstrap.bundle.min.js",*/
+/*"node_modules/bootstrap-template-ihm-gestion/vendor/jquery-easing/jquery.easing.min.js",*/
+/*"node_modules/bootstrap-template-ihm-gestion/js/sb-admin-2.min.js",*/
+/*"node_modules/bootstrap-template-ihm-gestion/vendor/chart.js/Chart.min.js",*/
+/*"node_modules/bootstrap-template-ihm-gestion/js/demo/chart-area-demo.js",*/
+/*"node_modules/bootstrap-template-ihm-gestion/js/demo/chart-pie-demo.js"*/

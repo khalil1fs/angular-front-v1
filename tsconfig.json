@@ -5,10 +5,13 @@
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
+    "allowJs":true,
+    "strict": false, // it was true  // is the one with strict initialisation
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
-    "noImplicitReturns": true,
+    "noImplicitReturns": false,  // was true
+    "noImplicitAny": false,
+    "strictPropertyInitialization": false,  // add this one
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,

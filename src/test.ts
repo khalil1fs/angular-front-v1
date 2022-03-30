@@ -2,6 +2,7 @@
 
 import 'zone.js/testing';
 import { getTestBed } from '@angular/core/testing';
+// import * as dragon from 'openseadragon';
 import {
   BrowserDynamicTestingModule,
   platformBrowserDynamicTesting
