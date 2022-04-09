@@ -1,0 +1,29 @@
+<div id="content-wrapper" class="d-flex flex-column" >
+  <div id="content" >
+    <div class="container-fluid">
+      <br>
+      <p class="mb-4 m-0 font-weight-bold text-dark mx-1"> Add New Departement </p>
+      <div class=" shadow mb-4">
+        <div class="card-body">
+          <div class="">
+            <div class="form-group row">
+              <div class="col-sm-6">
+                <label   class="form-label">Departement Name</label>
+                <input type="text" class="form-control"  [(ngModel)]="departement.nom_Depart">
+              </div>
+              <div class="col-sm-6">
+                <label   class="form-label">Departement Chef</label>
+                <input type="text" class="form-control"  [(ngModel)]="departement.chef">
+              </div>
+            </div>
+          </div>
+          <br>
+          <hr>
+          <div class="text-center col-sm-12 d-grid gap-2">
+            <button type="button" class="btn btn-outline-primary btn-lg"  (click)="save()"> Save </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="container-fluid">
+
+  <br>
+  <p class="mb-4 m-0 font-weight-bold text-dark mx-1"> Inscription list :
+  </p>
+
+  <!-- DataTales Example -->
+  <div class="card shadow mb-4">
+    <!--    <div class="card-body">-->
+    <div class="table-responsive">
+      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+        <th>Id</th>
+        <th>Date</th>
+        <th>Apoges</th>
+        <th>Full Name</th>
+        <th>semestre</th>
+        <th>Niveau</th>
+        </thead>
+        <tbody>
+        <tr *ngFor="let s of inscriptions; index as i">
+          <td>{{s.id}}</td>
+          <td>{{s.date_Inscription}}</td>
+          <td>{{s.student.apoge}}</td>
+          <td>{{s.student.name}} {{s.student.lastname}} </td>
+          <td>{{s.student.niveau.semestre}}</td>
+          <td>{{s.student.filiere.nomfiliere}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

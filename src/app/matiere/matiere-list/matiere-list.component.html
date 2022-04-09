@@ -1,0 +1,40 @@
+<div class="container-fluid">
+
+  <br>
+  <p class="mb-4 m-0 font-weight-bold text-dark mx-1"> Prof list :
+  </p>
+
+  <!-- DataTales Example -->
+  <div class="card shadow mb-4">
+    <!--    <div class="card-body">-->
+    <div class="table-responsive">
+
+
+      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+        <th>Name</th>
+        <th>filiere</th>
+        <th>Semestre</th>
+        <th>Prof</th>
+        <th>cin</th>
+        <th>matricule</th>
+        <th>Update</th>
+        <th>Delete</th>
+        </thead>
+        <tbody>
+        <tr *ngFor="let s of matieres; index as i">
+          <td>{{s.name_Matiere}}</td>
+          <td>{{s.filiere.nomfiliere}}</td>
+          <td>{{s.niveau.semestre}}</td>
+          <td>{{s.prof.name}} {{s.prof.last_Name}}</td>
+          <td>{{s.prof.cin}}</td>
+          <td>{{s.prof.matricule}}</td>
+          <td><span (click)="update(i,s)"><i class="fa fa-edit btn btn-warning "></i></span></td>
+          <td><span (click)="delete(i)"><i class="fa fa-trash btn">  </i></span></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

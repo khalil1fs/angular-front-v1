@@ -1,0 +1,33 @@
+<div class="container-fluid">
+
+  <br>
+  <p class="mb-4 m-0 font-weight-bold text-dark mx-1"> Seance list :</p>
+  <div class="card shadow mb-4">
+    <div class="table-responsive">
+      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+      <thead>
+      <th>Reference</th>
+      <th>Salle</th>
+      <th>Hour</th>
+      <th>Date</th>
+      <th>Subject Name</th>
+      <th>Prof</th>
+      <th>Branch Name</th>
+      <th>Semester</th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let s of seances; index as i">
+        <td>{{s.reference}}</td>
+        <td>{{s.salle}}</td>
+        <td>{{s.heure}}</td>
+        <td>{{s.date_Seance}}</td>
+        <td>{{s.matiere.name_Matiere}}</td>
+        <td>{{s.matiere.prof.name}} {{s.matiere.prof.last_Name}} </td>
+        <td>{{s.matiere.filiere.nomfiliere}}</td>
+        <td>{{s.matiere.niveau.semestre}}</td>
+      </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>

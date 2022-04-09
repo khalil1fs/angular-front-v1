@@ -1,0 +1,81 @@
+<div id="content-wrapper" class="d-flex flex-column" >
+  <div id="content" >
+    <div class="container">
+      <br>
+      <p class="mb-4 m-0 font-weight-bold text-dark mx-1">&nbsp;&nbsp;&nbsp; Prof Registration </p>
+      <div class=" shadow mb-4">
+        <div class="card-body">
+            <div class="form-group row">
+              <div class="col-sm-6">
+                <label class="form-label">First Name </label>
+                <input type="text" class="form-control" [(ngModel)]="prof.name">
+              </div>
+              <div class="col-sm-6">
+                <label  class="form-label">Last Name </label>
+                <input type="text" class="form-control" [(ngModel)]="prof.last_Name">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-6 ">
+                <label class="form-label">Matricule </label>
+                <input type="text" class="form-control " [(ngModel)]="prof.matricule">
+              </div>
+              <div class="col-sm-6">
+                <label  class="form-label">Cin </label>
+                <input type="text" class="form-control" [(ngModel)]="prof.cin">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-sm-6">
+                <label class="form-label">Mail </label>
+                <input type="text" class="form-control " [(ngModel)]="prof.email">
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label">Diplom </label>
+                <input type="text" class="form-control " [(ngModel)]="prof.diplom">
+              </div>
+
+            </div>
+
+            <div class="form-group row">
+            <div class="col-sm-12">
+              <label   class="form-label">Departement</label>
+              <select class=" form-select" aria-label="Floating label select example"
+                      [(ngModel)]="prof.departement.nom_Depart">
+                <option selected></option>
+                <option *ngFor="let s of departements">{{s.nom_Depart}}</option>
+              </select>
+            </div>
+            </div>
+          </div>
+          <hr>
+        <br>
+        <div class="text-center col-sm-12 d-grid gap-2">
+          <button type="button" class="btn btn-outline-primary btn-lg"  (click)="save()"> Save </button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

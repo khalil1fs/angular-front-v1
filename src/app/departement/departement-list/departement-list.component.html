@@ -1,0 +1,30 @@
+<div class="mb-1">
+  <br>
+  <p class="mb-2 m-0 font-weight-bold text-justify mx-1"> Departments list :
+  </p>
+  <div class="card shadow mb-4">
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+        <th>id</th>
+        <th>Name</th>
+        <th>N*Prof</th>
+        <th>N*Matiere</th>
+        <th>Chef</th>
+        <th>update</th>
+        <th>delete</th>
+        </thead>
+        <tbody>
+        <tr *ngFor="let s of departements; index as i">
+          <td>{{s.id}}</td>
+          <td>{{s.nom_Depart}} </td>
+          <td>{{s.chef}}</td>
+          <td>{{s.chef}}</td>
+          <td>{{s.chef}}</td>
+          <td><span (click)="update(i,s)"><i class="fa fa-edit btn btn-warning "></i></span></td>
+          <td><span (click)="delete(i)"><i class="fa-solid fa-trash-can"></i></span></td>
+        </tr>
+        </tbody>
+    </table>
+
+  </div>
+<!--</div>-->

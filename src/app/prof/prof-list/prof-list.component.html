@@ -1,0 +1,41 @@
+<div class="container-fluid">
+
+  <br>
+  <p class="mb-4 m-0 font-weight-bold text-dark mx-1"> Prof list :
+  </p>
+
+  <div class="card shadow mb-4">
+        <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered" id="dataTable"  cellspacing="0">
+        <thead>
+        <th>Matricule</th>
+        <th>CIN</th>
+        <th>first name</th>
+        <th>last name</th>
+        <th>diplom</th>
+        <th>Mail</th>
+        <th>Departement</th>
+        <th>Start Work</th>
+        <th>Update</th>
+        <th>Delete</th>
+        </thead>
+        <tbody>
+        <tr *ngFor="let s of profs; index as i">
+          <td>{{s.matricule}}</td>
+          <td>{{s.cin}}</td>
+          <td>{{s.name}}</td>
+          <td>{{s.last_Name}}</td>
+          <td>{{s.diplom}}</td>
+          <td>{{s.email}}</td>
+          <td>{{s.departement.nom_Depart}}</td>
+          <td> &nbsp; {{s.date_Start_Work.substring(0,10)}} &nbsp;</td>
+          <td><span (click)="update(i,s)"><i class="fa fa-edit btn btn-warning "></i></span></td>
+          <td><span (click)="delete(i)"><i class="fa fa-trash btn">  </i></span></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>

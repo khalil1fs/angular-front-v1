@@ -1,0 +1,58 @@
+<div id="content-wrapper" class="d-flex flex-column" >
+  <div id="content" >
+    <div class="container-fluid">
+      <br>
+      <p class="mb-4 m-0 font-weight-bold text-dark mx-1">Module : IHM
+<!--        {{note.matiere.name_Matiere}}-->
+      <div class="card shadow mb-4">
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+              <tr>
+                <th>Apoge</th>
+                <th>Full Name</th>
+                <th>Note 1</th>
+                <th>Note 2</th>
+                <th>Note 3</th>
+                <th>Average</th>
+                <th>Result</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let s of students; index as i">
+                <td>{{s.apoge}}</td>
+                <td>{{s.name | uppercase}} {{s.lastname | uppercase}}  </td>
+                <td>  <input type="text" class="form-control bg-light border-0 small"aria-describedby="basic-addon2"> </td>
+                <td>  <input type="text" class="form-control bg-light border-0 small" aria-describedby="basic-addon2"> </td>
+                <td>  <input type="text" class="form-control bg-light border-0 small" aria-describedby="basic-addon2"> </td>
+                <td></td>
+                <th></th>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+
+
+          <hr>
+          <div class="row">
+          <div class="text-center col-sm-4 d-grid gap-2">
+            <button type="button" class="btn btn-outline-primary btn-lg" >  Save Modification </button>
+          </div>
+          <div class="text-center col-sm-4 d-grid gap-2">
+            <button type="button" class="btn btn-outline-danger btn-lg">  Send final Result</button>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="sticky-footer bg-white">
+    <div class="container my-auto">
+      <div class="copyright text-center my-auto">
+        <span>Copyright &copy; powered by Khalil 2022</span>
+      </div>
+    </div>
+  </footer>
+</div>

@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router'
-
+import * as $ from 'jquery';
 import { AppComponent } from './app.component';
+
 import {HttpClientModule} from "@angular/common/http";
+
 import { StudentsComponent } from './students/students.component';
 import { StudentsListComponent } from './students/students-list/students-list.component';
 import { StudentsCreateComponent } from './students/students-create/students-create.component';
@@ -40,12 +42,18 @@ import { ResultListComponent } from './result/result-list/result-list.component'
 import { NavbarComponent } from './navbar/navbar.component';
 
 import { AppRoutingModule } from './app-routing.module';
-// import { NavTestComponent } from './nav-test/nav-test.component';                  //
-
-// const routes: Routes = [
-//   { path: 'home', component: StudentsCreateComponent }
-//   // { path: '', redirectTo: '/home', pathMatch: 'full'}
-// ];
+import { StudentSameClassComponent } from './student/student-same-class/student-same-class.component';
+import { HomeComponent } from './home/home.component';
+import {DocumentFicheComponent} from "./document/document-fiche/document-fiche.component";
+import { FooterComponent } from './footer/footer.component';
+import { SetingAllComponent } from './setting/seting-all/seting-all.component';
+import { StudentNavComponent } from './students/student-nav/student-nav.component';
+import { ProfNavComponent } from './prof/prof-nav/prof-nav.component';
+import { DocumentNavComponent } from './document/document-nav/document-nav.component';
+import { SearchStudentComponent } from './students/search-student/search-student.component';
+import { StudentsFindComponent } from './students/students-find/students-find.component';
+import { SeanceNavComponent } from './seance/seance-nav/seance-nav.component';
+import { ProfSearchComponent } from './prof/prof-search/prof-search.component';
 
 
 @NgModule({
@@ -84,13 +92,27 @@ import { AppRoutingModule } from './app-routing.module';
     ResultCreateComponent,
     ResultListComponent,
     NavbarComponent,
+    StudentSameClassComponent,
+    HomeComponent,
+    DocumentFicheComponent,
+    FooterComponent,
+    SetingAllComponent,
+    StudentNavComponent,
+    ProfNavComponent,
+    DocumentNavComponent,
+    SearchStudentComponent,
+    StudentsFindComponent,
+    SeanceNavComponent,
+    ProfSearchComponent,
+    // DarkModeComponent,
+    // /DarkModeToggle,
     // NavTestComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    AppRoutingModule,
+    AppRoutingModule
     // RouterModule.forRoot(routes)
   ],
   providers: [],

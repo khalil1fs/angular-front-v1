@@ -1,0 +1,39 @@
+<div class="container-fluid">
+
+  <br>
+  <p class="mb-4 m-0 font-weight-bold text-dark mx-1"> Absence list :
+  </p>
+
+  <!-- DataTales Example -->
+  <div class="card shadow mb-4">
+    <!--    <div class="card-body">-->
+    <div class="table-responsive">
+      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+      <thead>
+      <th>Reference</th>
+      <th>Apoges</th>
+      <th>Full name</th>
+      <th>Hour</th>
+      <th>date</th>
+      <th>matiere</th>
+      <th>justified</th>
+      <th>update</th>
+      <th>delete</th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let s of absences; index as i">
+        <td>{{s.reference}}</td>
+        <td>{{s.student.apoge}}</td>
+        <td>{{s.student.name}} {{s.student.lastname}}</td>
+        <td>{{s.seance.heure}}</td>
+        <td>{{s.seance.date_Seance}}</td>
+        <td>{{s.justife}}</td>
+        <td>{{s.seance.matiere.name_Matiere}}</td>
+        <td><span (click)="update(i,s)"><i class="fa fa-edit btn btn-warning "></i></span></td>
+        <td><span (click)="delete(i)"><i class="fa fa-trash btn">  </i></span></td>
+      </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>

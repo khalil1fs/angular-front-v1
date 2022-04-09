@@ -1,0 +1,29 @@
+<div class="card">
+  <div class="card-header">List des Notes</div>
+  <div class="card-body">
+    <table class="table table-striped">
+      <thead>
+      <th>id</th>
+      <th> Student</th>
+      <th>Matiere</th>
+      <th>note</th>
+      <th>remarque</th>
+      <th>date</th>
+      <th>update</th>
+      <th>delete</th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let s of notes; index as i">
+        <td>{{s.id}}</td>
+        <td>{{s.student.apoge}}</td>
+        <td>{{s.matiere.name_Matiere}}</td>
+        <td>{{s.resultat}}</td>
+        <td>{{s.remarque}}</td>
+        <td>{{s.date_Note}}</td>
+        <td><span (click)="delete(i)"><i class="fa fa-trash btn">  </i></span></td>
+        <td><span (click)="update(i,s)"><i class="fa fa-edit btn btn-warning "></i></span></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

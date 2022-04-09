@@ -1,0 +1,67 @@
+<div id="content-wrapper" class="d-flex flex-column" >
+  <div id="content" >
+
+
+    <div class="container-fluid">
+
+      <br>
+      <p class="mb-4 m-0 font-weight-bold text-dark mx-1"> Add New Seance </p>
+
+      <div class=" shadow mb-4">
+        <div class="card-body">
+          <div class="">
+
+            <div class="form-group row">
+              <div class="col-sm-6">
+                <label   class="form-label">Salle</label>
+                <input type="text" class="form-control"  [(ngModel)]="seance.salle">
+              </div>
+              <div class="col-sm-6">
+                <label   class="form-label">Hour</label>
+                <input type="text" class="form-control"  [(ngModel)]="seance.heure">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-6">
+                <label   class="form-label">Date</label>
+                <input type="text" class="form-control" placeholder="Example: 31-12-2022" aria-label="Example: 31-12-2022" [(ngModel)]="seance.date_Seance">
+              </div>
+                <div class="col-sm-6">
+                  <label style="font-size: 15px;" class="form-label">Subject</label>
+                  <select class=" form-select" aria-label="Floating label select example" [(ngModel)]="seance.matiere.name_Matiere">
+                    <option selected></option>
+                    <option *ngFor="let s of matieres">{{s.name_Matiere}}</option>
+                  </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+            <div class="col-sm-6">
+              <label style="font-size: 15px;" class="form-label">Semester</label>
+              <select class=" form-select" aria-label="Floating label select example" [(ngModel)]="seance.matiere.niveau.semestre">
+                <option selected></option>
+                <option *ngFor="let s of niveaux">{{s.semestre}}</option>
+              </select>
+            </div>
+              <div class="col-sm-6">
+              <label   class="form-label"> Branch </label>
+              <select class=" form-select" aria-label="Floating label select example" [(ngModel)]="seance.matiere.filiere.nomfiliere">
+                <option selected></option>
+                <option *ngFor="let s of filieres">{{s.nomfiliere}}</option>
+              </select>
+            </div>
+          </div>
+
+          <br>
+          <hr>
+          <div class="text-center col-sm-12 d-grid gap-2">
+            <button type="button" class="btn btn-outline-primary btn-lg"  (click)="save()"> Save </button>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>

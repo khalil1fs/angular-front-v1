@@ -1,0 +1,36 @@
+<div class="mb-1">
+  <br>
+  <p class="mb-2 m-0 font-weight-bold text-justify mx-1"> Student list :
+  </p>
+  <div class="card shadow mb-4">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+          <thead>
+          <th>Apo</th>
+          <th>CNE</th>
+          <th>Full Name</th>
+          <th>Birth</th>
+          <th>Phone</th>
+          <th>Mail</th>
+          <th>Sector</th>
+          <th>Semester</th>
+          <th>Update</th>
+          <th>Delete</th>
+          </thead>
+          <tbody>
+          <tr *ngFor="let s of students; index as i">
+            <td>{{s.apoge}}</td>
+            <td>{{s.cne | uppercase}}</td>
+            <td>{{s.name }} {{s.lastname | uppercase}}</td>
+            <td>{{s.date_Naissanse.substring(0,2)}}/{{s.date_Naissanse.substring(3,5)}}/{{s.date_Naissanse.substring(6,10)}}</td>
+            <td>{{s.phone}}</td>
+            <td>{{s.mail | lowercase}}</td>
+            <td>{{s.filiere.nomfiliere | uppercase}}</td>
+            <td>{{s.niveau.semestre | uppercase}}</td>
+            <td><span (click)="update(i,s)"><i class="fa fa-edit btn-warning btn"></i></span></td>
+            <td><span (click)="delete(i)"><i class="fa-solid fa-trash-can btn">  </i></span></td>
+          </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+

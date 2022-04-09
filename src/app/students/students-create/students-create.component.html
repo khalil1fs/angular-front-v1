@@ -1,0 +1,82 @@
+  <div id="content-wrapper" class="d-flex flex-column" >
+  <div id="content" >
+    <div class="container-fluid">
+      <br>
+      <p class="mb-4 m-0 font-weight-bold text-dark mx-1"> Add Student </p>
+      <div class=" shadow mb-4">
+        <div class="card-body">
+            <div class="form-group row">
+              <div class="col-sm-4">
+                <label style="font-size: 15px;" class="form-label">First Name </label>
+                <input type="text" class="form-control" [(ngModel)]="student.name">
+              </div>
+              <div class="col-sm-4">
+                <label style="font-size: 15px;" class="form-label">Last Name</label>
+                <input type="text" class="form-control" [(ngModel)]="student.lastname">
+              </div>
+              <div class="col-sm-4">
+                <label style="font-size: 15px;" class="form-label">Cne </label>
+                <input type="text" class="form-control" [(ngModel)]="student.cne">
+              </div>
+            </div>
+
+
+            <div class="form-group row">
+              <div class="col-sm-4 ">
+                <label style="font-size: 15px;" class="form-label">Country </label>
+                <input type="text" placeholder="Morocco"  class="form-control " [(ngModel)]="student.country">
+              </div>
+              <div class="col-sm-4">
+                <label style="font-size: 15px;" class="form-label">City </label>
+                <input type="text" class="form-control " [(ngModel)]="student.city">
+              </div>
+              <div class="col-sm-4">
+                <label style="font-size: 15px;" class="form-label">Date of Birth</label>
+                <input type="text" class="form-control" placeholder="Example: 31-12-2022" aria-label="Example: 31-12-2022" [(ngModel)]="student.date_Naissanse">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-4 ">
+                <label style="font-size: 15px;" class="form-label">Mail</label>
+                <input type="text" class="form-control" placeholder="UCA@uca.gov.ma" [(ngModel)]="student.mail">
+              </div>
+              <div class="col-sm-4">
+                <label style="font-size: 15px;" class="form-label">Phone Number</label>
+                <input type="text" class="form-control" placeholder="" [(ngModel)]="student.phone">
+              </div>
+              <div class="col-sm-4">
+                <label style="font-size: 15px;" class="form-label">Sexe </label>
+                <select class=" form-select" aria-label="Floating label select example" [(ngModel)]="student.sexe">
+                  <option>Male</option>
+                  <option>Female</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-6">
+                <label style="font-size: 15px;" class="form-label">Branch</label>
+                <select class=" form-select" aria-label="Floating label select example"
+                        [(ngModel)]="student.filiere.nomfiliere">
+                  <option selected></option>
+                  <option *ngFor="let s of filieres">{{s.nomfiliere}}</option>
+                </select>
+              </div>
+              <div class="col-sm-6">
+                <label style="font-size: 15px;" class="form-label">Semester</label>
+
+                <select class=" form-select" aria-label="Floating label select example" [(ngModel)]="student.niveau.semestre">
+                  <option selected></option>
+                  <option *ngFor="let s of niveaux">{{s.semestre}}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <hr>
+        <br>
+          <div class="text-center col-sm-12 d-grid gap-2">
+            <button type="button" class="btn btn-outline-primary btn-lg"  (click)="save()"> Save </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

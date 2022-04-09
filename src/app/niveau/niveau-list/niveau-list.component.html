@@ -1,0 +1,21 @@
+<div class="card">
+  <div class="card-header">List des Filieres</div>
+  <div class="card-body">
+    <table class="table table-striped">
+      <thead>
+      <th>Id</th>
+      <th>semestre</th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let s of niveaux; index as i">
+        <td>{{s.id}}</td>
+        <td>{{s.semestre}}</td>
+        <td><span (click)="delete(i)"><i class="fa fa-trash btn">  </i></span></td>
+        <td><span (click)="update(i,s)"><i class="fa fa-edit btn btn-warning "></i></span></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
