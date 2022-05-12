@@ -4,6 +4,7 @@ import {Filiere} from "./filiere.model";
 export class Student {
   public id: number;
   public apoge:string;
+  public apogeSearch:string;
   public cne:string;
   public sexe:string;
   public name:string;

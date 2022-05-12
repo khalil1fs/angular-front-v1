@@ -1,0 +1,63 @@
+<div id="content-wrapper" class="d-flex flex-column" >
+  <div id="content" >
+      <p class="mb-4 m-0 font-weight-bold text-dark mx-1"> &nbsp; Class </p>
+      <div class=" shadow mb-4">
+        <div class="card-body">
+          <div class="form-group row">
+            <div class="col-sm-4">
+              <label style="font-size: 15px;" class="form-label"> Filiere </label>
+              <select class=" form-select" aria-label="Floating label select example" [(ngModel)]="nomFiliere">
+                <option selected></option>
+                <option *ngFor="let s of filieres">{{s.nomfiliere}}</option>
+              </select>
+            </div>
+            <div class="col-sm-4">
+              <label style="font-size: 15px;" class="form-label"> Niveau </label>
+              <select class=" form-select" aria-label="Floating label select example" [(ngModel)]="semestre">
+                <option selected></option>
+                <option *ngFor="let s of niveaux">{{s.semestre}}</option>
+              </select>
+            </div>
+            <div class="col-sm-4">
+              <label style="font-size: 15px;" class="form-label">&nbsp;</label>
+              <button type="button" class="btn btn-outline-primary form-control" (click)="students(nomFiliere,semestre)"> Search </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card shadow mb-4">
+          <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+            <th>Apo</th>
+            <th>CNE</th>
+            <th>Full Name</th>
+            <th>Birth</th>
+            <th>Phone</th>
+            <th>Mail</th>
+            <th>Sector</th>
+            <th>Semester</th>
+            <th>Update</th>
+            <th>Delete</th>
+            </thead>
+            <tbody>
+            <tr *ngFor="let s of student1 ; index as i">
+              <td>{{s.apoge}}</td>
+              <td>{{s.cne | uppercase}}</td>
+              <td>{{s.name }} {{s.lastname | uppercase}}</td>
+              <td>{{s.date_Naissanse.substring(0,2)}}/{{s.date_Naissanse.substring(3,5)}}/{{s.date_Naissanse.substring(6,10)}}</td>
+              <td>{{s.phone}}</td>
+              <td>{{s.mail | lowercase}}</td>
+              <td>{{s.filiere.nomfiliere | uppercase}}</td>
+              <td>{{s.niveau.semestre | uppercase}}</td>
+              <td><span (click)="update(i,s)"><i class="fa fa-edit btn btn-warning "></i></span></td>
+<!--              <td><span (click)="delete(i)"><i class="fa fa-trash btn">  </i></span></td>-->
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+      </div>
+    </div>
+</div>

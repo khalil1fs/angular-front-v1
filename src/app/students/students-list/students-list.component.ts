@@ -25,7 +25,6 @@ export class StudentsListComponent implements OnInit {
   constructor(private studentService: StudentService) {
   }
 
-
   ngOnInit(): void {
     this.studentService.findAll();
   }

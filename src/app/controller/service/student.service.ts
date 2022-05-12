@@ -28,17 +28,28 @@ private _niveau:Niveau;
 
 
 
-public findByApoge():Student {
-  this.http.get<Student>('http://localhost:8080/api/gestion/student/apoge/'+this.student.apoge+'/').subscribe(
-    data=> {
-      return data;
+public findByApoge(){
+  this.http.get<Array<Student>>('http://localhost:8080/api/gestion/student/apoge/'+this.student.apogeSearch+'/').subscribe(
+    data => {
+    this.students1 = data;
     },error => {
       console.log(error);
     }
   );
-  return null;
+
 }
 
+
+  public findAll(){
+    console.log("sawsan");
+    this.http.get<Array<Student>>('http://localhost:8080/api/gestion/student/').subscribe(
+      data=> {
+        this.students = data;
+      },error => {
+        console.log(error);
+      }
+    );
+  }
 public save(){
 
   if(this.student.id==null) {
@@ -66,16 +77,6 @@ public save(){
 }
 
 
-  public findAll(){
-    console.log("sawsan");
-    this.http.get<Array<Student>>('http://localhost:8080/api/gestion/student/').subscribe(
-      data=> {
-        this.students = data;
-      },error => {
-        console.log(error);
-      }
-    );
-  }
 
   public findAllSameClass(semestre:String,filiere:String): Array<Student> {
     this.http.get<Array<Student>>('http://localhost:8080/api/gestion/student/niveau/'+ semestre +'/id_fil/'+ filiere).subscribe(
@@ -125,7 +126,7 @@ public save(){
   }
   get students1(): Array<Student> {
     if (this._students1 == null){
-      this._students = new Array<Student>();
+      this._students1 = new Array<Student>();
     }
     return this._students1;
   }
